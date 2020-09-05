@@ -29,10 +29,10 @@
                 <artifactId>chronos-jmeter-maven-plugin</artifactId>
                 <version>1.1.0</version>
                 <configuration>
-                    <input>C:\Users\mrity\eclipse-workspace\testPerfJMeter\src\test\jmeter\${jmxTest}</input>
+                    <input>./src/test/jmeter/${jmxTest}</input>
                     <jmeterVariables>
                     
-                     <csvData>C:\Users\mrity\eclipse-workspace\testPerfJMeter\src\test\resources\testdata\${csvData}</csvData>
+                     <csvData>./src/test/resources/testdata/${csvData}</csvData>
                         <threads>${threads}</threads>
                         <rampTime>${rampTime}</rampTime>
                         <loopCount>${loopCount}</loopCount>
