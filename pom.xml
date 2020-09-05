@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>testPerfJMeter</groupId>
+  <artifactId>testPerfJMeter</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>testPerfJMeter</name>
+  
+  
+  <properties>
+        <jmxTest>apitest1.jmx</jmxTest>
+        <threads>1</threads>
+        <rampTime>0</rampTime>
+        <loopCount>1</loopCount>
+        <options></options>
+        <sleep>0</sleep>
+        <csvData>testinput.csv</csvData>
+        <jmeter.home>C:\softwareTools\apache-jmeter-5.3</jmeter.home>
+        
+ </properties>
+  
+<build>
+
+            <plugins>
+            
+    
+            
+        <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>chronos-jmeter-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <configuration>
+                    <input>C:\Users\mrity\eclipse-workspace\testPerfJMeter\src\test\jmeter\${jmxTest}</input>
+                    <jmeterVariables>
+                    
+                     <csvData>C:\Users\mrity\eclipse-workspace\testPerfJMeter\src\test\resources\testdata\${csvData}</csvData>
+                        <threads>${threads}</threads>
+                        <rampTime>${rampTime}</rampTime>
+                        <loopCount>${loopCount}</loopCount>
+                        <options>${options}</options>
+                        <sleep>${sleep}</sleep>
+                        
+                    </jmeterVariables>
+                    <jmeterOutput/>
+                    <jmeterhome>${jmeter.home}</jmeterhome>
+                    <heap>300m</heap>
+                    <newsize>300m</newsize>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>         
+                
+            
+                
+                
+                
+                
+                
+                
+                
+                
+      
+            </plugins>
+    
+   
+</build>
+  
+   <dependencies>
+ 
+    <dependency>
+    <groupId>org.apache.jmeter</groupId>
+    <artifactId>ApacheJMeter_java</artifactId>
+    <version>5.3</version>
+	</dependency>
+	
+
+      
+    </dependencies>
+    
+    
+    
+</project>
