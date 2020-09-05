@@ -42,25 +42,26 @@
           <boolProp name="LoopController.continue_forever">true</boolProp>
           <stringProp name="LoopController.loops">${__property(loopCount)}</stringProp>
         </LoopController>
-        <hashTree/>
-        <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="ApiTestCall_1" enabled="true">
-          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="SERVER_URL" elementType="Argument">
-                <stringProp name="Argument.name">SERVER_URL</stringProp>
-                <stringProp name="Argument.value">${BASE_URL}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="CLIENT_ID" elementType="Argument">
-                <stringProp name="Argument.name">CLIENT_ID</stringProp>
-                <stringProp name="Argument.value">${USERID}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="classname">com.jmeterperf.test.TestAPICall1</stringProp>
-        </JavaSampler>
-        <hashTree/>
+        <hashTree>
+          <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="ApiTestCall_1" enabled="true">
+            <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="SERVER_URL" elementType="Argument">
+                  <stringProp name="Argument.name">SERVER_URL</stringProp>
+                  <stringProp name="Argument.value">${BASE_URL}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="CLIENT_ID" elementType="Argument">
+                  <stringProp name="Argument.name">CLIENT_ID</stringProp>
+                  <stringProp name="Argument.value">${USERID}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="classname">com.jmeterperf.test.TestAPICall1</stringProp>
+          </JavaSampler>
+          <hashTree/>
+        </hashTree>
       </hashTree>
     </hashTree>
   </hashTree>
